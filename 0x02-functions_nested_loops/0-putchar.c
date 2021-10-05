@@ -1,6 +1,14 @@
-#include "stdio.h"
+#include "main.h"
 
-int main(void)
+/**
+ *main - entry point
+ *
+ *Description: Print _putchar
+ *
+ *Return: always 0
+ */
+
+int main(void)/
 {
 	int i = 0;
 	char c;
