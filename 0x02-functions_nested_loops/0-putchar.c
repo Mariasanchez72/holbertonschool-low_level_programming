@@ -3,7 +3,7 @@
 /**
  *main - entry point
  *
- *Description: Print _putchar
+ *Description: Prints _putchar with _putchar
  *
  *Return: always 0
  */
