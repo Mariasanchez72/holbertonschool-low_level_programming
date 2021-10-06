@@ -8,12 +8,12 @@
 
 int main(void)
 {
-	char h[] = "_putchar\n";
+	char h[] = "_putchar";
 	int m;
 
 	m = 0;
 
-	while (m <= 10)
+	while (m <= 8)
 	{
 		_putchar(h[m]);
 		m++;
