@@ -1,34 +1,26 @@
-#include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
-
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+  * main - print the first 50 fibonacci numbers.
+  * Return: Nothing.
+  */
 int main(void)
 {
-	long double fib1;
-	long double fib2;
-	long double fib3;
-	int n;
+	unsigned long count, i, j, k;
 
-	n = 1;
-	fib1 = 0;
-	fib2 = 1;
-	printf("%.Lf, ", fib2);
-	while (n <= 49)
+	i = 0;
+	j = 1;
+	for (count = 0; count < 50; count++)
 	{
-		fib3 = fib1 + fib2;
-		printf("%.Lf", fib3);
-		n++;
-		fib1 = fib2;
-		fib2 = fib3;
-		if (n != 48)
+		k = i + j;
+		i = j;
+		j = k;
+		printf("%lu", k);
+		if (count == 49)
+			putchar('\n');
+		else
 		{
 			printf(", ");
-}
+		}
 	}
-	putchar('\n');
+	return (0);
 }
