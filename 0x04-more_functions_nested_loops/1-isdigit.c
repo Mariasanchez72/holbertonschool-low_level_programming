@@ -6,16 +6,14 @@
  */
 int _isdigit (int c)
 {
-  int d;
-
-  if (c >= 48 && c <= 57)
-    {
-      d= 1;
-
-    }
-  else
-    {
-      d = 0;
-    }
-  return (d);
+	int d;
+	if (c >= 48 && c <= 57)
+	{
+		d= 1;
+	}
+	else
+	{
+		d = 0;
+	}
+	return (d);
 }
