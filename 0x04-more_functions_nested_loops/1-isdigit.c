@@ -4,12 +4,14 @@
  * Return: 1 if its a digit, otherwise 0.
  * @c: Vairable to be evaluated.
  */
-int _isdigit (int c)
+
+int _isdigit(int c)
 {
 	int d;
+
 	if (c >= 48 && c <= 57)
 	{
-		d= 1;
+		d = 1;
 	}
 	else
 	{
