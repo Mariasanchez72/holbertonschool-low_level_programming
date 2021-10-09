@@ -1,22 +1,14 @@
-#include "main.h"
-/**
- * print_number -print number putchar
- * @n:integer
- * Return: void
- */
-void printnumber(int n)
+#include <main.h>
+int main()
 {
+	int number;
+	printf("Enter an integer: ");
 
-    if (n < 0) {
-        putchar('-');
-        n = -n;
-    }
+// reads and stores input
+	scanf("%d", &number);
 
-    if (n == 0)
-        putchar('0');
+// displays output
+	printf("You entered: %d", number);
 
-    if (n/10)
-        printnumber(n/10);
-
-    putchar(n%10 + '0');
+	return 0;
 }
