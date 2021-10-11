@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
+* reset_to_98 - Update the value to 98
+* @n: int
+* Return: 0
+*/
 
-Void reset_to_98(int *n)
+void reset_to_98(int *n)
 {
 	*n = 98;
 }
