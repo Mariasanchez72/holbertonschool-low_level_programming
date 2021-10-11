@@ -6,13 +6,13 @@
  *Return: lenght of string in s
  */
 
-int _strlen (char *s)
+int _strlen(char *s)
 {
 int x;
 x = 0;
-while (s[] != '\0')
-{
-	x++;
-}
-return(x);
+	while (s[x] != '\0')
+	{
+		x++;
+	}
+	return (x);
 }
