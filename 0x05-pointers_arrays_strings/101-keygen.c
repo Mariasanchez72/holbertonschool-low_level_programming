@@ -1,39 +1,43 @@
-#include "main.h"
+#include <main.h>
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
-* main - Random keygenerator.
-* Return: void
-*/
-
+ * main - random password generator for 101-crackme
+ *
+ * Return: always 0
+ */
 int main(void)
 {
-/* set ascii min limit */
-int x = 32;
-/* set ascii max limit */
-int y = 127;
-/* set lenght */
-int k;
-int z = 9;
-int a = 0;
-char p[10];
-/* seed random with time */
-srand(time(0));
+	int i, j, k, s;
+	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char p[58];
 
-	while (a < z)
+	srand(time(NULL));
+	while (s != 2772)
 	{
-	/* count to z limit */
-		k = rand() % 100;
-			/* check if is in valid ascii range */
-			if(k > x && k < y)
+		i = k = s = 0;
+		while ((2772 - 122) > s)
+		{
+			j = rand() % 62;
+			p[i] = c[j];
+			s += c[j];
+			i++;
+		}
+		while (c[k])
+		{
+			if (c[k] == (2772 - s))
 			{
-			p[a] = k;
-			a++;
+				p[i] = c[k];
+				s += c[k];
+				i++;
+				break;
 			}
+			k++;
+		}
 	}
-	p[a] = '\0';
+	p[i] = '\0';
 	printf("%s", p);
 	return (0);
- }
+}
