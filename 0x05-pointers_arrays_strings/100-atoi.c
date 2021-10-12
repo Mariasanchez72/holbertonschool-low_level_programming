@@ -1,36 +1,40 @@
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
 
 /**
-* _atoi - Remove letters.
-* @s: string
-* Return: void
-*/
-
+ * _atoi - Convert a string to an integer.
+ * @s: The pointer to convert
+ *
+ * Return: A integer
+ */
 int _atoi(char *s)
 {
-int x = 48;
-int y = 57;
-int a = 0;
-int plus = 43;
-int less = 45;
-/* if ascii > 48 && < 57 */
-	while (s[a])
+	int c = 0;
+	unsigned int ni = 0;
+	int min = 1;
+	int isi = 0;
+
+	while (s[c])
 	{
-		if (s[a] == plus || s[a] == less)
+		if (s[c] == 45)
 		{
-		putchar(s[a]);
+			min *= -1;
 		}
-		if (s[a] > x && s[a] < y)
+
+		while (s[c] >= 48 && s[c] <= 57)
 		{
-		putchar(s[a]);
+			isi = 1;
+			ni = (ni * 10) + (s[c] - '0');
+			c++;
 		}
-		else
+
+		if (isi == 1)
 		{
-		return (0);
+			break;
 		}
-	a++;
+
+		c++;
 	}
-	return (0);
+
+	ni *= min;
+	return (ni);
 }
